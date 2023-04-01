@@ -108,7 +108,7 @@ DATABASES = {
         'NAME': DB,
         'ENFORCE_SCHEMA': False,
         'CLIENT': {
-            'host': "mongodb+srv://JR:Sistemas11@prueba.npgrssw.mongodb.net/?retryWrites=true&w=majority"
+            'host': "mongodb+srv://{USER}:{PASS}@{HOST}/?retryWrites=true&w=majority"
         }
     }
 }
