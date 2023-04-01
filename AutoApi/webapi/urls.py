@@ -7,7 +7,7 @@ from webapi.auto.view import auto_list, auto_detail
 from webapi.auto.view import auto_color, auto_color_detail
 
 
-
+#Llamado a las rutas
 
 
 urlpatterns = [

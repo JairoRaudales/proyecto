@@ -1,6 +1,8 @@
 from rest_framework import serializers 
 from webapi.models import Auto,TipoAuto,Color,Marca,Modelo,Estado,AutoColor,Cliente,Genero
 
+
+
 class TipoAutoSerializer(serializers.ModelSerializer):
     class Meta:
         model = TipoAuto

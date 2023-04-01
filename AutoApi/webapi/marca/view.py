@@ -10,6 +10,8 @@ from webapi.models import Marca
 from webapi.serializers import MarcaSerializer
 from rest_framework.decorators import api_view
 
+
+
 @api_view(['GET', 'POST'])
 def marca_list(request):
     if request.method == 'GET':
