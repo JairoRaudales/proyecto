@@ -55,10 +55,6 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
 
-    # CORS
-    'corsheaders.middleware.CorsMiddleware',
-    'django.middleware.common.CommonMiddleware'
-
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -66,6 +62,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    # CORS
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware'
 ]
 
 CORS_ORIGIN_ALLOW_ALL = False
@@ -100,15 +100,15 @@ WSGI_APPLICATION = 'AutoApi.wsgi.application'
 DB = os.environ.get('DB')
 USER = os.environ.get('USER')
 PASSWORD = os.environ.get('PASS')
-HOST = os.environ.get('HOST')
+HOST = os.environ.get('CLUSTER')
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django',
+        'ENGINE': 'djongo',
         'NAME': DB,
-        'ENFORCE_SHEMA': False,
+        'ENFORCE_SCHEMA': False,
         'CLIENT': {
-            'host': f"mongodb+srv://{USER}:{PASSWORD}@{HOST}/{DB}?retryWrites=true&w=majority"
+            'host': "mongodb+srv://JR:Sistemas11@prueba.npgrssw.mongodb.net/?retryWrites=true&w=majority"
         }
     }
 }
