@@ -22,6 +22,8 @@ from django.db.models import Case, When, Value, IntegerField
 
 import pandas as pd 
 
+
+#Creacion de API'S
 # Create your views here.
 @api_view(['POST'])
 def auto_list(request):
